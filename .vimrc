@@ -1,5 +1,7 @@
 " ************ Init *************
 set nocompatible
+call pathogen#infect()
+
 filetype plugin indent on
 syntax on
 
@@ -15,6 +17,8 @@ if has('gui_running')
   set guioptions-=T
   set lines=40
   hi cursorline guibg=#333333
+  " 输入法切换"
+  set iminsert=0 imsearch=0
 endif
 
 " ***************ENVIROMENT *****************
@@ -91,10 +95,11 @@ endif
 " *******************  keymap ****************
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
+map <C-V> "+gP
 
 " *****************  PLUGIN ********************"
 " vimwiki"
 map <s-F4> :VimwikiAll2HTML<cr>
 map <F4> :Vimwiki2HTML<cr>
-let g:vimwiki_list = [{'html_header': '~/vimwiki_html/header.tpl'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/public_html/wiki/'}]
 
