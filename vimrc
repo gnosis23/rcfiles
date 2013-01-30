@@ -89,21 +89,6 @@ syntax on
 set hlsearch
 
 " *******************  PROGRAMMING SHORTCUTS **************** 
-" Enable omni completion. (Ctrl-X Ctrl-O)
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-
-" use syntax complete if nothing else available
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-              \ if &omnifunc == "" |
-              \   setlocal omnifunc=syntaxcomplete#Complete |
-              \ endif
-endif
 
 set cot-=preview "disable doc preview in omnicomplete
 " *******************  keymap ****************
@@ -139,9 +124,7 @@ let g:user_zen_expandabbr_key='<C-e>'
 
 
 " --- SuperTab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 
 " --- EasyMotion
 hi link EasyMotionTarget ErrorMsg
@@ -151,3 +134,32 @@ hi link EasyMotionShade Comment
 nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to Tagbar when opening it
 " let g:tagbar_autofocus = 1
+
+" --- neocomplcache
+" Disable AutoComplPop
+" let g:acp_enableAtStartup
+
+" launch neocomplcache automatically on vim startup
+let g:neocomplcache_enable_at_startup = 1
+
+" use smartcase
+let g:neocomplcache_enable_smart_case = 1
+
+let g:neocomplcache_enable_camel_case_completion = 1
+
+" Use underscore completion.
+let g:neocomplcache_enable_underbar_completion = 1
+
+" Sets minimum char length of syntax keyword.
+let g:neocomplcache_min_syntax_length = 3
+
+" solve incorporating with snipmate
+let g:neocomplcache_disable_auto_complete = 1
+
+" Enable omni completion. Not required if they are already set elsewhere in .vimrc
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
