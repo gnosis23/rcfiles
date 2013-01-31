@@ -18,8 +18,8 @@ if has('gui_running')
   set background=dark
   set t_Co=256
   set cursorline
-  set lines=40
-  colors wombat256
+  set lines=40 columns=120
+  colors solarized
   
   highlight CursorLine guibg=#223853 ctermbg=24  gui=none cterm=none
   " 输入法切换
@@ -124,7 +124,12 @@ let g:user_zen_expandabbr_key='<C-e>'
 
 
 " --- SuperTab
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+" use <c-x><c-n> to get previous variable
+" use <Tab> or <S-Tab> to get omni completion
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDiscoverDiscovery = 
+      \ ["&completefunc:<c-x><c-n>", "&omnifunc:<c-x><c-o>"]
 
 " --- EasyMotion
 hi link EasyMotionTarget ErrorMsg
@@ -139,22 +144,6 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 " Disable AutoComplPop
 " let g:acp_enableAtStartup
 
-" launch neocomplcache automatically on vim startup
-let g:neocomplcache_enable_at_startup = 1
-
-" use smartcase
-let g:neocomplcache_enable_smart_case = 1
-
-let g:neocomplcache_enable_camel_case_completion = 1
-
-" Use underscore completion.
-let g:neocomplcache_enable_underbar_completion = 1
-
-" Sets minimum char length of syntax keyword.
-let g:neocomplcache_min_syntax_length = 3
-
-" solve incorporating with snipmate
-let g:neocomplcache_disable_auto_complete = 1
 
 " Enable omni completion. Not required if they are already set elsewhere in .vimrc
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
