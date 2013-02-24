@@ -19,7 +19,7 @@ if has('gui_running')
   set t_Co=256
   set cursorline
   set lines=40 columns=120
-  colors solarized
+  colorscheme solarized
   
   highlight CursorLine guibg=#223853 ctermbg=24  gui=none cterm=none
   " 输入法切换
