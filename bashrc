@@ -121,5 +121,5 @@ man(){
 }
 
 # bashmarks
-source ~/.local/bin/bashmarks.sh
+# source ~/.local/bin/bashmarks.sh
 
