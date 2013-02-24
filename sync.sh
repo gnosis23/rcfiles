@@ -1,8 +1,16 @@
 #!/bin/bash
 cd "$(dirname "$0")"
+PAPAPA="$(pwd)"
 git pull
 function doIt(){
-  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "readme.md" -av . ~
+  rm ~/.vimrc
+  ln -s $PAPAPA/.vimrc ~/.vimrc
+  rm ~/.bashrc
+  ln -s $PAPAPA/.bashrc ~/.bashrc
+  rm -r ~/.vim
+  cp -r $PAPAPA/.vim ~/
+
+  source ~/.bashrc
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
