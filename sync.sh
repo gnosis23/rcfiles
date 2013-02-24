@@ -18,6 +18,11 @@ function doIt(){
   git submodule update
 
   git submodule foreach git pull origin master
+
+  #xmledit
+  cd ~/.vim/bundle/xmledit/ftplugin/
+  ln -s xml.vim html.vim
+  ln -s xml.vim php.vim
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
