@@ -3,6 +3,7 @@ cd "$(dirname "$0")"
 PAPAPA="$(pwd)"
 git pull
 function doIt(){
+  echo "create .vimrc"
   rm ~/.vimrc
   ln -s $PAPAPA/.vimrc ~/.vimrc
   rm ~/.bashrc
@@ -11,6 +12,12 @@ function doIt(){
   cp -r $PAPAPA/.vim ~/
 
   source ~/.bashrc
+
+  echo "update submodules"
+  git submodule init
+  git submodule update
+
+  git submodule foreach git pull origin master
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
