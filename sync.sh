@@ -8,8 +8,8 @@ function doIt(){
   ln -s $PAPAPA/.vimrc ~/.vimrc
   rm ~/.bashrc
   ln -s $PAPAPA/.bashrc ~/.bashrc
-  rm -r ~/.vim
-  cp -r $PAPAPA/.vim ~/
+  rm ~/.vim
+  ln -s $PAPAPA/.vim ~/.vim
 
   source ~/.bashrc
 
