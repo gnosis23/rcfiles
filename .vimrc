@@ -98,7 +98,7 @@ let g:mapleader=","
 
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
-map <C-V> "+gP
+" map <C-V> "+gP
 
 " auto save"
 map <F5> :w<CR>
@@ -126,10 +126,11 @@ let g:user_zen_expandabbr_key='<C-e>'
 " --- SuperTab
 " use <c-x><c-n> to get previous variable
 " use <Tab> or <S-Tab> to get omni completion
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = 
-      \ ["&completefunc:<c-x><c-n>", "&omnifunc:<c-x><c-o>"]
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+" let g:SuperTabContextDiscoverDiscovery = 
+"       \ ["&completefunc:<c-x><c-n>", "&omnifunc:<c-x><c-o>"]
+
 
 " --- EasyMotion
 hi link EasyMotionTarget ErrorMsg
@@ -186,6 +187,7 @@ function Do_OneFileMake()
   if filereadable(outfilename)
     "execute "!./".toexename
   endif
+  execute "cw"
 endfunction
 
 
