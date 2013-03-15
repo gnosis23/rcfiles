@@ -130,7 +130,8 @@ let g:user_zen_expandabbr_key='<C-e>'
 " let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 " let g:SuperTabContextDiscoverDiscovery = 
 "       \ ["&completefunc:<c-x><c-n>", "&omnifunc:<c-x><c-o>"]
-
+" let SuperTabMappingForward="<Tab>"
+" let SuperTabMappingBackward="<S-Tab>"
 
 " --- EasyMotion
 hi link EasyMotionTarget ErrorMsg
