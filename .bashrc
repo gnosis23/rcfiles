@@ -84,6 +84,7 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
+alias gvim='UBUNTU_MENUPROXY= gvim'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

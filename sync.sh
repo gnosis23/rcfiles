@@ -8,21 +8,9 @@ function doIt(){
   ln -s $PAPAPA/.vimrc ~/.vimrc
   rm ~/.bashrc
   ln -s $PAPAPA/.bashrc ~/.bashrc
-  rm ~/.vim
-  ln -s $PAPAPA/.vim ~/.vim
 
   source ~/.bashrc
 
-  echo "update submodules"
-  git submodule init
-  git submodule update
-
-  git submodule foreach git pull origin master
-
-  #xmledit
-  cd ~/.vim/bundle/xmledit/ftplugin/
-  ln -s xml.vim html.vim
-  ln -s xml.vim php.vim
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

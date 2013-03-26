@@ -117,7 +117,7 @@ vnoremap > >gv " better indentation
 " vimwiki"
 map <s-F4> :VimwikiAll2HTML<cr>
 map <F4> :Vimwiki2HTML<cr>
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/public_html/wiki/'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/wiki_html/'}]
 
 " zencoding
 let g:user_zen_expandabbr_key='<C-e>'
