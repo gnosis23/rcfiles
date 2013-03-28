@@ -41,6 +41,7 @@ set autowrite
 set whichwrap=b,s,h,l,<,>,[,]
 set ignorecase
 set smartcase
+set autoread "文件改变时字段切换
 
 set nobackup
 set mouse=a
@@ -102,6 +103,7 @@ map <CR> o<Esc>
 
 " auto save"
 map <F5> :w<CR>
+map <F10> :!./%<<CR>
 " quick quit command"
 noremap <Leader>q :quit<CR>
 noremap <Leader>E :qa!<CR>
