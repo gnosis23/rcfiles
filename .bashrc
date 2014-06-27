@@ -124,3 +124,6 @@ man(){
 # bashmarks
 # source ~/.local/bin/bashmarks.sh
 
+# bash_profile loaded when login in.
+source .bash_profile
+

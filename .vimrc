@@ -70,7 +70,7 @@ if version >= 703
   highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 endif
 
-set guifont=Monaco\ 12
+set guifont=Monospace\ 10
 
 " ************** FORMATTING ****************
 set autoindent
@@ -103,7 +103,10 @@ map <CR> o<Esc>
 
 " auto save"
 map <F5> :w<CR>
+map <F7> :tabp<CR>
+map <F8> :tabn<CR>
 map <F10> :!./%<<CR>
+
 " quick quit command"
 noremap <Leader>q :quit<CR>
 noremap <Leader>E :qa!<CR>
@@ -140,7 +143,7 @@ hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade Comment
 
 " --- TagBar
-nnoremap <silent> <F7> :TagbarToggle<CR>
+" nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to Tagbar when opening it
 " let g:tagbar_autofocus = 1
 
