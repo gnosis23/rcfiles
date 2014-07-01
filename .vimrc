@@ -159,6 +159,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" nerdtree
+let NERDTreeIgnore = ['\(\.c\)\@<!$[[file]]']
+
 " compile a single file
 " from http://www.vimer.cn/2009/10/11.html
 map <F9> :call Do_OneFileMake()<CR>

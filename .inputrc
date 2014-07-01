@@ -1,0 +1,21 @@
+set editing-mode emacs
+
+# do not need leading . when match file names
+set match-hidden-files on
+
+# displays the common prefix of the list of possible completions
+set menu-complete-display-prefix on
+
+# for too long text in one line
+set horizontal-scroll-mode on
+
+# set completion-prefix-display-length 15
+
+# do not display more than 30 possible completions
+set completion-query-items 24
+set completion-ignore-case on
+
+TAB: menu-complete
+
+
+"C-xC-r": re-read-init-file
