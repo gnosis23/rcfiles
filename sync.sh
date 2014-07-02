@@ -1,13 +1,13 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-PAPAPA="$(pwd)"
+curdir="$(pwd)"
 git pull
 function doIt(){
   echo "create .vimrc"
   rm ~/.vimrc
-  ln -s $PAPAPA/.vimrc ~/.vimrc
+  ln -s $curdir/.vimrc ~/.vimrc
   rm ~/.bashrc
-  ln -s $PAPAPA/.bashrc ~/.bashrc
+  ln -s $curdir/.bashrc ~/.bashrc
 
   source ~/.bashrc
 
