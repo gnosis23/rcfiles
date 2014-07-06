@@ -19,7 +19,9 @@ set completion-ignore-case on
 TAB: menu-complete
 "\C-x\C-r": re-read-init-file
 "\C-x\"": "\"\"\C-b"
+"\C-x{": "{}\C-b"
 "\C-k": kill-whole-line
+"\e[15~": "make\n"
 
 $if Bash
   "\C-xq": "\eb\"\ef\""
