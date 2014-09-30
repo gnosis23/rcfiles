@@ -107,6 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias cl='clear'
+alias rmongo='mongo localhost:27017/mydb '
 
 # set colors for man pages
 man(){
@@ -123,4 +124,4 @@ man(){
 
 # bashmarks
 # source ~/.local/bin/bashmarks.sh
-
+export PATH=~/mongodb/mongodb-2.6.3/bin:$PATH

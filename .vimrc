@@ -70,7 +70,7 @@ if version >= 703
   highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 endif
 
-set guifont=Monospace\ 10
+set guifont=Monaco\ 10
 
 " ************** FORMATTING ****************
 set autoindent
@@ -160,7 +160,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " nerdtree
-let NERDTreeIgnore = ['\(\.c\)\@<!$[[file]]']
 
 " compile a single file
 " from http://www.vimer.cn/2009/10/11.html
