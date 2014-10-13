@@ -118,11 +118,14 @@ cmap cd. lcd %:p:h
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation
 
+map <F4> <C-]>
+map <F3> <C-t>
+
 " *****************  PLUGIN ********************"
 " vimwiki"
-map <s-F4> :VimwikiAll2HTML<cr>
-map <F4> :Vimwiki2HTML<cr>
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/wiki_html/'}]
+"map <s-F4> :VimwikiAll2HTML<cr>
+"map <F4> :Vimwiki2HTML<cr>
+"let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/wiki_html/'}]
 
 " zencoding
 let g:user_zen_expandabbr_key='<C-e>'
@@ -159,7 +162,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" nerdtree
+" Taglist
+
+" nerdtree:
 
 " compile a single file
 " from http://www.vimer.cn/2009/10/11.html

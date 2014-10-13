@@ -1,5 +1,5 @@
 set auto-load safe-path /
-
+set print pretty
 # ----------- Alias --------------
 define exit
   quit
