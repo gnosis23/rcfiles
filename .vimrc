@@ -102,6 +102,7 @@ map <CR> o<Esc>
 " map <C-V> "+gP
 
 " auto save"
+map <F2> :tn<CR>
 map <F5> :w<CR>
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
@@ -110,6 +111,7 @@ map <F10> :!./%<<CR>
 " quick quit command"
 noremap <Leader>q :quit<CR>
 noremap <Leader>E :qa!<CR>
+inoremap <Leader>n <c-x><c-]>
 
 " :cd. change working direcotry to that of the current file
 cmap cd. lcd %:p:h
