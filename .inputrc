@@ -7,7 +7,7 @@ set match-hidden-files on
 set menu-complete-display-prefix on
 
 # for too long text in one line
-set horizontal-scroll-mode on
+# set horizontal-scroll-mode on
 
 # set completion-prefix-display-length 15
 
@@ -22,6 +22,10 @@ TAB: menu-complete
 "\C-x{": "{}\C-b"
 "\C-k": kill-whole-line
 "\e[15~": "make\n"
+
+"\e[5~": reverse-search-history
+"\e[6~": forward-search-history
+
 
 $if Bash
   "\C-xq": "\eb\"\ef\""

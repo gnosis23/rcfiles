@@ -74,10 +74,10 @@ set guifont=Monaco\ 10
 
 " ************** FORMATTING ****************
 set autoindent
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
-set softtabstop=2
+set softtabstop=4
 
 set pastetoggle=<F12>
 
