@@ -47,6 +47,8 @@ set nobackup
 set mouse=a
 set textwidth=80
 
+set tags+=~/.vim/systags
+
 " ************* DISPLAY ****************
 set nu
 set encoding=utf-8
@@ -167,44 +169,6 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " Taglist
 
 " nerdtree:
-
-" compile a single file
-" from http://www.vimer.cn/2009/10/11.html
-map <F9> :call Do_OneFileMake()<CR>
-function Do_OneFileMake()
-  if expand("%:p:h")!=getcwd()
-    echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press <F7> to redirect to the dir of this file." | echohl None
-    return
-  endif
-  let sourcefileename=expand("%:t")
-  if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c"))
-    echohl WarningMsg | echo "Fail to make! Please select the right file!" | echohl None
-    return
-  endif
-  if &filetype=="c"
-    set makeprg=gcc\ -o\ %<\ %
-  elseif &filetype=="cpp"
-    set makeprg=g++\ -o\ %<\ %
-  endif
-  let outfilename=substitute(sourcefileename,'\(\.[^.]*\)', '', 'g')
-  let toexename=outfilename
-  if filereadable(outfilename)
-    let outdeletedsuccess=delete("./".outfilename)
-    if(outdeletedsuccess!=0)
-      set makeprg=make
-      echohl WarningMsg | echo "Fail to make! I cannot delete the ".outfilename | echohl None
-      return
-    endif
-  endif
-  execute "silent make"
-  set makeprg=make
-  execute "normal :"
-  if filereadable(outfilename)
-    "execute "!./".toexename
-  endif
-  execute "cw"
-endfunction
-
 
 
 

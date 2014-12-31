@@ -16,7 +16,7 @@ set completion-query-items 24
 set completion-ignore-case on
 
 # keymaps
-TAB: menu-complete
+# TAB: menu-complete
 "\C-x\C-r": re-read-init-file
 "\C-x\"": "\"\"\C-b"
 "\C-x{": "{}\C-b"
