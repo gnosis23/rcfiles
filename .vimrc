@@ -135,7 +135,7 @@ map <F3> <C-t>
 let g:user_zen_expandabbr_key='<C-e>'
 
 " nerdtree
-g:solarized_italic=0
+let g:solarized_italic=0
 
 " --- SuperTab
 " use <c-x><c-n> to get previous variable
