@@ -48,7 +48,7 @@ set mouse=a
 set textwidth=80
 
 set tags+=~/.vim/systags
-
+set cpt=.,w,b
 " ************* DISPLAY ****************
 set nu
 set encoding=utf-8
@@ -134,6 +134,8 @@ map <F3> <C-t>
 " zencoding
 let g:user_zen_expandabbr_key='<C-e>'
 
+" nerdtree
+g:solarized_italic=0
 
 " --- SuperTab
 " use <c-x><c-n> to get previous variable
