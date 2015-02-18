@@ -107,6 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias cl='clear'
+alias rm='trash' # need trash-cli
 alias rmongo='mongo localhost:27017/mydb '
 
 # set colors for man pages
