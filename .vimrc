@@ -87,6 +87,7 @@ set pastetoggle=<F12>
 
 " auto reload vimrc when edit it
 autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 syntax on
 set hlsearch
