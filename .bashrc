@@ -107,6 +107,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 alias cl='clear'
+alias bashrefresh='source ~/.bashrc'
+alias bashedit='vim ~/.bashrc'
 
 # set colors for man pages
 man(){
@@ -121,3 +123,8 @@ man(){
       man "$@"
 }
 
+echo --------------------------------------------
+echo   load .bashrc
+echo   enter bashrefresh to refresh 
+echo   enter bashedit to edit
+echo --------------------------------------------
