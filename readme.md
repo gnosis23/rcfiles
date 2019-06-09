@@ -1,16 +1,9 @@
-#this is my dotfiles
+# this is my dotfiles
 
 ## Installation
 
 ```bash
+sudo apt-get install git vim
 git clone https://github.com/gnosis23/rcfiles.git && ./sync.sh
-```
-
-
-```python
-import os
-if __name__ == '__main--':
-  main()
-  print 'hello world'
 ```
 
