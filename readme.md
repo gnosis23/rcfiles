@@ -4,6 +4,14 @@
 
 ```bash
 sudo apt-get install git vim
-git clone https://github.com/gnosis23/rcfiles.git && ./sync.sh
-```
 
+# install homebrew
+
+# install oh-my-zsh
+# copy zshrc ~/.zshrc
+
+# install tmux
+
+# install z.sh
+# copy z.sh $HOME/config
+```
