@@ -33,8 +33,9 @@ set statusline+=%L    " Total lines
 let maplocalleader = " "
 let mapleader = " "
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ue :split $MYVIMRC<cr>
+nnoremap <leader>us :source $MYVIMRC<cr>
+nnoremap <leader>bd :close<cr>
 
 inoremap jk <esc>
 
