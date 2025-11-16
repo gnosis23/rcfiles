@@ -35,9 +35,11 @@ let mapleader = " "
 
 nnoremap <leader>ue :split $MYVIMRC<cr>
 nnoremap <leader>us :source $MYVIMRC<cr>
+nnoremap <leader>bb :buffers<cr>
 nnoremap <leader>bd :close<cr>
-
-inoremap jk <esc>
+nnoremap <leader>\| :vsplit<cr>
+nnoremap <leader>\_ :split<cr>
+nnoremap <leader>r :source %<cr>
 
 " ----------------------------------------------------------
 " autocmd
@@ -47,8 +49,6 @@ augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
   autocmd FileType vim nnoremap <c-s> :w<cr>
-  autocmd FileType vim nnoremap J }
-  autocmd FileType vim nnoremap H {
 augroup END
 
 autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
