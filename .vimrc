@@ -1,5 +1,17 @@
-set number relativenumber
+" echo ">^.^<"
+
+" ----------------------------------------------------------
+" Basic
+" ----------------------------------------------------------
+set nocompatible    " disable vi compatible
 set incsearch
+set hlsearch
+set ignorecase
+set encoding=utf-8
+
+set number
+set ruler
+set showcmd
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·
 
@@ -23,9 +35,12 @@ set statusline=%f
 set statusline+=\     " Separator
 set statusline+=%y    " Total lines
 set statusline+=%=    " switch to the right side
+set statusline+=\ %P
+set statusline+=\ (
 set statusline+=%l    " current line
-set statusline+=/     " Separator
-set statusline+=%L    " Total lines
+set statusline+=,     " Separator
+set statusline+=%c    " Total LINES
+set statusline+=)
 
 " ----------------------------------------------------------
 " keymaps
@@ -33,23 +48,63 @@ set statusline+=%L    " Total lines
 let maplocalleader = " "
 let mapleader = " "
 
+vnoremap <leader>\ U
+
+nnoremap <leader>- ddp
+nnoremap <leader>_ ddkP
+nnoremap H ^
+nnoremap L $
+
 nnoremap <leader>ue :split $MYVIMRC<cr>
 nnoremap <leader>us :source $MYVIMRC<cr>
-nnoremap <leader>bb :buffers<cr>
 nnoremap <leader>bd :close<cr>
 nnoremap <leader>\| :vsplit<cr>
 nnoremap <leader>\_ :split<cr>
-nnoremap <leader>r :source %<cr>
+nnoremap <leader>qq :quit<cr>
+
+inoremap jk <esc>
 
 " ----------------------------------------------------------
 " autocmd
 " ----------------------------------------------------------
-" Vimscript file settings
+
+" Vimscript file settings --------------- {{{
 augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType vim nnoremap <c-s> :w<cr>
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+    autocmd FileType vim nnoremap <c-s> :w<cr>
+    autocmd FileType vim nnoremap <leader>r :source %<cr>
+augroup END
+" }}}
+
+augroup filetype_py
+    autocmd!
+    autocmd FileType python nnoremap <F5> :!python %<cr>
 augroup END
 
-autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+" ----------------------------------------------------------
+" plugin
+" ----------------------------------------------------------
+call plug#begin()
+
+" List your plugins here
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+
+" My plugins
+
+call plug#end()
+
+silent! colorscheme tokyonight
+
+nnoremap <silent> <leader>ff :Files<CR>
+nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>/ :Rg<CR>
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+
+" ----------------------------------------------------------
+" custom
+" ----------------------------------------------------------
 
